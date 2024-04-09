@@ -3,15 +3,15 @@
 ## Instructions
 Clone this repository.
 
-`git clone`
+`git clone SSH` # Copy SSH key from GitHub
 
 Create a virtual environment.
 
-`python -m venv env_name`
+`python -m venv env_name` # Best practice for name is `env`
 
 Install the packages.
 
-`pip install -r requirements.txt`
+`pip install -r requirements.txt` # Best practice for filename is `requirements.txt`
 
 ## Commonly used Git commands
 * `git init .` # dot for current directory
