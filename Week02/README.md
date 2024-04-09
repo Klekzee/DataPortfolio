@@ -1,4 +1,4 @@
-# Episode 2 of the End-to-End Data Portfolio
+# End-to-End Data Portfolio 02
 
 ## Instructions
 Clone this repository.
