@@ -1,6 +1,17 @@
 # Episode 2 of the End-to-End Data Portfolio
 
 ## Instructions
+Clone this repository.
+
+`git clone`
+
+Create a virtual environment.
+
+`python -m venv env_name`
+
+Install the packages.
+
+`pip install -r requirements.txt`
 
 ## Commonly used Git commands
 * `git init .` # dot for current directory
