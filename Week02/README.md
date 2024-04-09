@@ -1,4 +1,5 @@
 # End-to-End Data Portfolio 02
+This also serve as my personal notes on working with Git and Github.
 
 ## Instructions
 Clone this repository.
@@ -21,3 +22,8 @@ Install the packages.
 * `git push`
 * `git pull`
 * `git clone`
+
+## Connecting Git with GitHub
+* `git remote add origin SSH_link` # SSH_link can be copied from GitHub
+* `git branch -M main`
+* `git push -u origin main`
