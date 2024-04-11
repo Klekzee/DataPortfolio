@@ -16,6 +16,12 @@
 * You are now prompted to create a new user. Enter your username and set a password.
 
 ## vsftpd Configuration
+
 * `ls /etc/` to locate the vsftpd.conf file.
 * `cp /etc/vsftpd.conf /etc/vsftpd.conf_original` to create an original copy of the file.
 * `nano /etc/vsftpd.conf` nano is a text editor so we can edit the file
+* `systemctl restart vsftpd`
+* `systemctl status vsfpd`
+* `touch /etc/vsfpd.chroot_list` create a blank list of users for chroot
+
+## Setup FTP user
