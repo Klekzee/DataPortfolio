@@ -8,7 +8,7 @@ Clone this repository.
 
 Create a virtual environment.
 
-`python -m venv env_name` # Best practice for name is `env`
+`python -m venv <env_name>` # Best practice for name is `env`
 
 Install the packages.
 
