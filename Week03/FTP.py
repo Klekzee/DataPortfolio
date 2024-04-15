@@ -7,7 +7,7 @@ from os import environ, remove
 from pathlib import Path
 from ftplib import FTP_TLS
 
-# Connects to an FTP server and returns FTP_TLS object
+# Function to connect to an FTP server and returns FTP_TLS object
 def get_ftp() -> FTP_TLS:
     # Get FTP details
     FTPHOST = environ["FTPHOST"]
@@ -34,6 +34,7 @@ def read_csv(config: dict) -> pd.DataFrame:
     params = config["PARAMS"]
     return pd.read_csv(url, **params)
 
+# Main function for Extracting / Downloading / Uploading / Deleting
 def pipeline():
     # Load source configuration from config.json file
     with open("config.json", "rb") as fp:
@@ -61,8 +62,21 @@ def pipeline():
 
 if __name__=="__main__":
     
-    schedule.every().day.at('00:00').do(pipeline)
+    # For inputing a parameter (manual or schedule) when executing the script
+    param = sys.argv[1]
+    
+    if param == "manual":
 
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
+        pipeline()
+
+    elif param == "schedule":
+
+        # Schedule to run every day at midnight
+        schedule.every().day.at('00:00').do(pipeline)
+
+        while True:
+            schedule.run_pending()
+            time.sleep(1)
+
+    else:
+        print("Invalid parameter. The app will not run")
