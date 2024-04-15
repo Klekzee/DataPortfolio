@@ -18,5 +18,10 @@ def get_ftp() -> FTP_TLS:
     ftp.prot_p()
     return ftp
 
+def read_csv(config: dict) -> pd.DataFrame:
+    url = config["URL"]
+    params = config["PARAMS"]
+    return pd.read_csv(url, **params)
+
 if __name__=="__main__":
     get_ftp()
