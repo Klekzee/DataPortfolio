@@ -1,3 +1,15 @@
+# End-to-End Data Portfolio 03
+
+Episode 3 of Josh Dev's First End-to-End Data Portfolio series.
+
+* Setting up a WSL (Windows Subsystem for Linux).
+* Setting up the FTP server.
+* Connecting to the FTP server and establishing a secure connection.
+* Creating a pipeline for downloading, uploading, and deleting data.
+* The pipeline involves downloading from the URL, uploading to the FTP server, and deleting files locally.
+* Adding parameters for manual or scheduled execution.
+
+# Notes for myself
 * `sudo su`, Root Access
 * `apt update && apt upgrade`
     * apt (make changes to Ubuntu)
@@ -23,5 +35,3 @@
 * `systemctl restart vsftpd`
 * `systemctl status vsfpd`
 * `touch /etc/vsfpd.chroot_list` create a blank list of users for chroot
-
-## Setup FTP user
