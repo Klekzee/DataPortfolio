@@ -18,10 +18,19 @@ def get_ftp() -> FTP_TLS:
     ftp.prot_p()
     return ftp
 
+# Function to read csv files from the URL
 def read_csv(config: dict) -> pd.DataFrame:
     url = config["URL"]
     params = config["PARAMS"]
     return pd.read_csv(url, **params)
 
+
+
 if __name__=="__main__":
-    get_ftp()
+    
+    # Load source configuration from config.json
+    with open("config.josn", "rb") as fp:
+        config = json.load(fp)
+
+
+    print(read_csv(config["OFAC_CONS_PRIM"]).head())
