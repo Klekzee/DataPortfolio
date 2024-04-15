@@ -79,4 +79,4 @@ if __name__=="__main__":
             time.sleep(1)
 
     else:
-        print("Invalid parameter. The app will not run")
+        print("Invalid parameter. The app will not run.")
