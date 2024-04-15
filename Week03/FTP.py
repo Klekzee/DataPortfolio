@@ -56,9 +56,9 @@ def pipeline():
         upload_to_ftp(ftp, file_name)
         print(f'Uploaded {file_name} successfully!')
 
-        # Delete the local file
-        delete_file(file_name)
-        print(f'Deleted {file_name} successfully!')
+        # Delete the local file (Uncomment if you want to delete the local file)
+        # delete_file(file_name)
+        # print(f'Deleted {file_name} successfully!')
 
 if __name__=="__main__":
     
