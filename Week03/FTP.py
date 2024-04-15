@@ -7,6 +7,7 @@ from os import environ, remove
 from pathlib import Path
 from ftplib import FTP_TLS
 
+# Connects to an FTP server and returns FTP_TLS object
 def get_ftp() -> FTP_TLS:
     # Get FTP details
     FTPHOST = environ["FTPHOST"]
@@ -28,9 +29,16 @@ def read_csv(config: dict) -> pd.DataFrame:
 
 if __name__=="__main__":
     
-    # Load source configuration from config.json
-    with open("config.josn", "rb") as fp:
+    # Load source configuration from config.json file
+    with open("config.json", "rb") as fp:
         config = json.load(fp)
 
+    # Itteration for each source in the config.json file
+    for source_name, source_config in config.items():
+        file_name = source_name + ".csv"
+        df = read_csv(source_config)
+        
+        # Download to local
+        df.to_csv(file_name, index=False)
+        print(f'Downloaded {file_name} successfully')
 
-    print(read_csv(config["OFAC_CONS_PRIM"]).head())
