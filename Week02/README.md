@@ -1,4 +1,7 @@
 # End-to-End Data Portfolio 02
+
+Episode 2 of Josh Dev's First End-to-End Data Portfolio series.
+
 This also serve as my personal notes on working with Git and Github.
 
 ## Instructions
