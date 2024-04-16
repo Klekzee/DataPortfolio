@@ -11,3 +11,7 @@ All of the projects are guided by Josh Dev's series 'First End-to-End Data Portf
 ## Week 03
 
 * Extracting Data from Web to FTP
+
+## Week 04
+
+* Loading CSV files from FTP to PostgreSQL using SSIS
